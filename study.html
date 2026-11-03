@@ -46,7 +46,7 @@ footer{background:var(--navy);color:#bdd1da;text-align:center;padding:32px 18px;
 <main>
 <section class="lesson-section white" id="overview"><div class="wrap"><span class="kicker">01 · Learning Goals</span><h2>Understand the main idea</h2><p class="intro">Work through each section in order. Read, listen, speak, write, practise and check your answers.</p><div class="feature" id="main-idea"></div><div class="grid2"><div class="card"><h3>When and how to use it</h3><p id="how-to-use"></p></div><div class="card"><h3>A useful detail</h3><p id="useful-detail"></p></div></div><div class="feature gold"><strong>By the end:</strong> You should be able to explain the main idea, recognise useful patterns, study ten authentic examples and apply the language in your own writing and speaking.</div></div></section>
 <section class="lesson-section" id="rules"><div class="wrap"><span class="kicker">02 · Rules and Patterns</span><h2>Clear explanations and important exceptions</h2><p class="intro">Read the notes carefully. Pay attention to how meaning, grammar and spelling can change in different situations.</p><div class="rule-card"><div id="rule-content" class="rules-text"></div></div><div class="feature"><strong>British English tip:</strong> Notice British spelling, usage and pronunciation. A word may have several accepted forms; context and meaning help you choose.</div></div></section>
-<section class="lesson-section white" id="examples"><div class="wrap"><span class="kicker">03 · The Language in Use</span><h2>Ten worked examples</h2><p class="intro">Read these examples from the Academy's study guide. Say each one aloud, notice the target language and try to explain its meaning.</p><div class="grid2" id="examples-grid"></div></div></section>
+<section class="lesson-section white" id="examples"><div class="wrap"><span class="kicker">03 · The Language in Use</span><h2>Ten worked examples</h2><p class="intro">Read these ten focused examples. Some sentences have been editorially revised where an earlier study-guide example did not match the lesson topic. Say each one aloud and explain its meaning.</p><div class="grid2" id="examples-grid"></div></div></section>
 <section class="lesson-section white" id="deep-dive" hidden><div class="wrap">
 <span class="kicker">Extra Teaching · Beyond the Study Book</span>
 <h2 class="deep-head">Detailed Grammar Workshop</h2>
@@ -87,6 +87,8 @@ footer{background:var(--navy);color:#bdd1da;text-align:center;padding:32px 18px;
 const db=window.EVA_COURSE_DATA, deepMap=window.EVA_GRAMMAR_EXPANSIONS||{}, params=new URLSearchParams(location.search), id=params.get("lesson"), lesson=db&&db.lessons.find(function(x){return x.id===id;});
 if(id==="001"){location.replace("lesson.html");return;}
 if(!lesson){document.getElementById("not-found").hidden=false;return;}
+const editorialCorrections=(window.EVA_EDITORIAL_CORRECTIONS||{})[lesson.id];
+if(editorialCorrections){lesson.examples=lesson.examples.map(function(example,i){return editorialCorrections[i+1]||example;});}
 document.getElementById("lesson-page").hidden=false;
 const moduleInfo=db.modules.find(function(m){return m.number===lesson.module;})||{title:"English Foundations"};
 const byId=function(x){return document.getElementById(x)};
@@ -98,7 +100,7 @@ byId("hero-intro").textContent=lesson.main;
 byId("hero-level").textContent=lesson.level;
 byId("main-idea").textContent=lesson.main;
 byId("how-to-use").textContent=lesson.how;
-byId("useful-detail").textContent=lesson.detail||"Study the ten worked examples and notice how the topic is used in real situations.";
+byId("useful-detail").textContent=deepMap[lesson.id]?deepMap[lesson.id].sections[0].explain:(lesson.detail||"Study the ten worked examples and notice how the topic is used in real situations.");
 const rawRules=(lesson.rules||"").trim();
 if(rawRules){
 byId("rule-content").innerHTML=rawRules.split(/\n/).map(function(line){
