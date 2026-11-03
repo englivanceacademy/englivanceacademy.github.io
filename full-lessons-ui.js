@@ -67,7 +67,7 @@ window.EVA_RENDER_FULL=function(lesson,chapter){
  function mark(name){
   let attempted=0;
   l.practice[name].forEach((q,i)=>{const value=state.answers[name+'-'+i]||'',ok=q.options?value===q.answer:matches(q,value);if(value.trim())attempted++;
-   const f=byId('fl-feedback-'+name+'-'+i);f.hidden=false;f.className='feedback '+(ok?'good':'bad');f.textContent=(ok?'Correct. ':value.trim()?'Review. ':'Not answered. ')+'Answer: '+q.answer+'. '+q.why;
+   const f=byId('fl-feedback-'+name+'-'+i);f.hidden=false;f.className='feedback '+(ok?'good':'bad');f.textContent=(ok?'Correct. ':value.trim()?'Review. ':'Not answered. ')+'Answer: '+q.answer+(/[.!?]$/.test(q.answer)?' ':'. ')+q.why;
   });
   const score=byId('fl-score-'+name);score.hidden=false;score.textContent='Score: '+scoreFor(name)+'/'+l.practice[name].length+'. Answered: '+attempted+'/'+l.practice[name].length+'. Read each explanation, then try again.';
  }
