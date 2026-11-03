@@ -12,7 +12,7 @@ Last updated: 3 November 2026
 
 ## Full curriculum
 
-All 240 lesson pages follow the existing Academy study guide, with 29 modules and seven broad learning bands (Pre-A1 through C2-oriented). Each study-page edition retains the original ten worked examples, flashcards and 40 practice activities, with 20 automatically checked and 20 open-ended. Browser-local progress and print are supported.
+All 240 lesson pages follow the existing Academy study guide, with 29 modules and seven broad learning bands (Pre-A1 through C2-oriented). Each study-page edition provides ten core worked examples (including editorially corrected replacements when a recycled book sentence was off-topic), flashcards and 40 practice activities, with 20 automatically checked and 20 open-ended. Browser-local progress and print are supported.
 
 Lesson numbers and sequence follow the PDF `Easy_Learning_English_240_Lessons_Clickable_Module_Lesson_Finder.pdf`. Some earlier Facebook lesson numbers differ. Do not silently merge the two numbering systems.
 
@@ -26,6 +26,8 @@ Lesson numbers and sequence follow the PDF `Easy_Learning_English_240_Lessons_Cl
 | Remaining study-guide editions | 173 | Original study-guide explanations, ten worked examples each, flashcards, 40 activities, answer keys and progress; still awaiting deep manual editorial expansion |
 
 **Important:** All 240 lesson *pages* are published. This does **not** mean all 240 have reached the unusually thorough editorial depth of Lesson 001. The 64 newly enhanced topics are substantive targeted grammar workshops, but still need further context, extra dialogues, varied topic-specific assessment and careful source review to reach the complete gold standard. The remaining 173 await comparable enrichment.
+
+**Example audit:** 62 recycled or off-topic study-guide example sentences were replaced in 38 of the expanded lessons, to keep the core examples aligned with the specific grammar topic. More example auditing is needed for the other lessons.
 
 ## Grammar workshop coverage (64 lessons in 12 topic families)
 
