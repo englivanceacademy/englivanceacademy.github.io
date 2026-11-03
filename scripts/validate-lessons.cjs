@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.resolve(__dirname,'..');
 global.window={};
-for(const name of ['course-data','full-lessons','foundation-lessons','a1-lessons','grammar-expansions','full-lessons-ui'])require(path.join(root,name+'.js'));
+for(const name of ['course-data','full-lessons','foundation-lessons','a1-lessons','a1-completion','grammar-expansions','full-lessons-ui'])require(path.join(root,name+'.js'));
 const db=window.EVA_COURSE_DATA,full=window.EVA_FULL_LESSONS;
 const assert=(ok,message)=>{if(!ok)throw Error(message)};
 const groupNames=['mc','gap','correct','order','read','write'];
