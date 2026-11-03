@@ -413,7 +413,7 @@ a.btn{text-decoration:none}
 <div class="links">
 <a href="#home">Home</a>
 <a href="#courses">Courses</a>
-<a href="#lessons">Lessons</a>
+<a href="catalog.html">All 240 Lessons</a>
 <a href="#practice">Practice</a>
 </div>
 </nav>
@@ -427,6 +427,7 @@ a.btn{text-decoration:none}
 <h1>English for everyone.<br><span class="gold">Confidence for life.</span></h1>
 <p>Learn British English from absolute beginner to advanced. Simple explanations, practical examples and useful exercises — completely free.</p>
 <a href="lesson.html" class="btn btn-gold">Start Lesson 001 — Free →</a>
+<a href="catalog.html" class="btn btn-white">Explore 240 Lessons</a>
 <a href="#courses" class="btn btn-white">Explore Courses</a>
 <p style="font-size:12px">✓ 100% Free &nbsp; ✓ British English &nbsp; ✓ Learn at Your Pace</p>
 </div>
@@ -447,7 +448,7 @@ a.btn{text-decoration:none}
 
 <div class="stats">
 <div class="wrap stat-grid">
-<div><strong>240</strong><small>Planned Lessons</small></div>
+<div><strong>240</strong><small>Study Lessons</small></div>
 <div><strong>7</strong><small>Course Levels</small></div>
 <div><strong>FREE</strong><small>Learning Access</small></div>
 </div>
@@ -470,7 +471,7 @@ a.btn{text-decoration:none}
 <div class="wrap">
 <div class="section-label">THE COMPLETE COURSE ROADMAP</div>
 <h2 class="section-title">From Zero to Advanced English</h2>
-<p class="section-sub">Our 240-lesson programme is organised into seven progressive stages. Lessons will be added as they are developed.</p>
+<p class="section-sub">Study all 240 lessons across seven progressive stages, from absolute beginner to C2-oriented learning. Lesson 001 is a special extended edition; the remaining lessons follow our study guide with interactive practice.</p>
 <div class="level-grid" id="level-grid"></div>
 </div>
 </section>
@@ -479,13 +480,10 @@ a.btn{text-decoration:none}
 <div class="wrap">
 <div class="section-label">FREE ENGLISH LESSONS</div>
 <h2 class="section-title">Start Learning English — Free</h2>
-<p class="section-sub">Lesson 001 is a complete interactive lesson with 40 practice activities and model answers. Other listed lessons are short previews while the full course is being developed.</p>
-<input id="search" type="search" placeholder="Search lessons...">
+<p class="section-sub">Explore the first lessons below, or browse the complete 240-lesson pathway. Lessons include rules, examples, 40 practice activities, model answers and progress saving.</p>
+<p><a href="catalog.html" class="btn btn-gold" style="background:#f4b942;color:#0d1b2a">Browse All 240 Lessons →</a></p>
+<input id="search" type="search" placeholder="Find a lesson by number or topic...">
 <div class="grid3" id="lesson-grid"></div>
-<div class="lesson-view" id="lesson-view" hidden>
-<div id="lesson-content"></div>
-<button class="btn btn-teal" onclick="document.getElementById('practice').scrollIntoView({behavior:'smooth'})">Practise with a Quiz →</button>
-</div>
 </div>
 </section>
 
@@ -516,6 +514,7 @@ a.btn{text-decoration:none}
 <p class="note">© 2026 Engli Vance Academy. All rights reserved.</p>
 </footer>
 
+<script src="course-data.js"></script>
 <script>
 const levels=[
 ["Pre-A1","Absolute Beginner","001–024"],
@@ -536,184 +535,16 @@ levels.map(l=>`
 <small>LESSONS ${l[2]}</small>
 </div>`).join("");
 
-const lessons=[
-{
-id:"001",
-title:"Welcome to English",
-sub:"Everyday Phrases and Learning Routines",
-intro:"Welcome to your English journey. Learning a new language becomes easier when you practise useful words and sentences every day.",
-rule:"Use Hello to greet someone. Use Please for polite requests and Thank you to show appreciation.",
-examples:[
-"Hello! My name is James.",
-"Good morning. How are you?",
-"I am learning English.",
-"Could you repeat that, please?"
-],
-tip:"Practise a few useful English sentences every day."
-},
-{
-id:"002",
-title:"The English Alphabet",
-sub:"Letters A–Z",
-intro:"The English alphabet contains 26 letters. Each letter has an uppercase and a lowercase form.",
-rule:"The five main vowel letters are A, E, I, O and U. The remaining 21 letters are consonant letters.",
-examples:[
-"A a — Apple",
-"B b — Book",
-"C c — City",
-"Z z — Zoo"
-],
-tip:"In British English, the letter Z is normally called zed."
-},
-{
-id:"003",
-title:"Common Vowel Sounds",
-sub:"Introduction to Pronunciation",
-intro:"English vowel sounds are important for clear pronunciation. One vowel letter can represent different sounds in different words.",
-rule:"Learn to recognise and distinguish vowel sounds. Spelling and pronunciation do not always match.",
-examples:[
-"ship — sheep",
-"sit — seat",
-"full — fool",
-"bed — bird"
-],
-tip:"This is a short introductory preview. More pronunciation practice will be added."
-},
-{
-id:"007",
-title:"Greetings and Polite Expressions",
-sub:"Everyday Communication",
-intro:"Polite expressions help us communicate naturally in everyday situations.",
-rule:"Use Good morning, Good afternoon and Good evening at appropriate times. Use please, thank you and excuse me to communicate politely.",
-examples:[
-"Good morning, Emily.",
-"Nice to meet you.",
-"Excuse me, where is the station?",
-"Thank you very much."
-],
-tip:"Could you help me, please? is a natural polite request."
-},
-{
-id:"008",
-title:"What Is a Noun?",
-sub:"People, Places, Things and Ideas",
-intro:"A noun is a word that names a person, place, thing or idea.",
-rule:"Common nouns name general people or things. Proper nouns name particular people or places and normally begin with capital letters.",
-examples:[
-"Person — doctor",
-"Place — hospital",
-"Thing — computer",
-"Idea — happiness"
-],
-tip:"Some nouns are countable, while others are uncountable."
-},
-{
-id:"009",
-title:"Subject Pronouns",
-sub:"I, You, He, She, It, We, They",
-intro:"Subject pronouns are used instead of nouns to indicate who or what performs an action.",
-rule:"Use I for yourself, you for the person addressed, he/she/it for singular subjects, and we/they for groups.",
-examples:[
-"I am ready.",
-"She works in London.",
-"We study English.",
-"They are happy."
-],
-tip:"The subject pronoun I is always written with a capital letter."
-},
-{
-id:"010",
-title:"Verbs: Actions and States",
-sub:"Understanding English Verbs",
-intro:"A verb describes an action, event or state.",
-rule:"Action verbs describe activities, while state verbs describe situations, possession, knowledge or feelings.",
-examples:[
-"James writes an email.",
-"Emily knows the answer.",
-"They play football.",
-"I like this book."
-],
-tip:"Many state verbs are not normally used in the continuous form when describing a state."
-},
-{
-id:"010-A",
-title:"Singular Verbs",
-sub:"Subject–Verb Agreement",
-intro:"The subject and the verb must agree in number and person.",
-rule:"In the present simple, most verbs take -s or -es with he, she and it. Use the base form with I, you, we and they.",
-examples:[
-"He works every day.",
-"She watches television.",
-"They work every day.",
-"The child studies English."
-],
-tip:"The third-person singular forms of have and do are has and does."
-},
-{
-id:"011",
-title:"The Verb BE",
-sub:"Am, Is and Are",
-intro:"BE is one of the most important English verbs. It describes identity, jobs, feelings, age, location and other situations.",
-rule:"Use am with I; is with he, she, it and singular subjects; and are with you, we, they and plural subjects.",
-examples:[
-"I am a student.",
-"She is a nurse.",
-"They are at home.",
-"Are you ready?"
-],
-tip:"Common contractions include I'm, you're, he's, she's, we're and they're."
-},
-{
-id:"012",
-title:"The Verb HAVE",
-sub:"Have, Has and Have Got",
-intro:"HAVE is used to describe possession, relationships and many everyday situations.",
-rule:"Use have with I, you, we and they. Use has with he, she and it. Have got and has got are common expressions for possession in British English.",
-examples:[
-"I have a new notebook.",
-"She has two brothers.",
-"We have got a car.",
-"Has he got a pen?"
-],
-tip:"Both She doesn't have a car and She hasn't got a car are possible in British English."
-}
-];
-
+const lessons=window.EVA_COURSE_DATA.lessons;
+function escLesson(x){return String(x).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
 function renderLessons(query=""){
-const results=lessons.filter(l=>
-(l.id+" "+l.title+" "+l.sub).toLowerCase().includes(query.toLowerCase())
-);
-document.getElementById("lesson-grid").innerHTML=
-results.length?results.map(l=>`
-<div class="lesson-card">
-<small>LESSON ${l.id} · PRE-A1</small>
-<h3>${l.title}</h3>
-<p>${l.sub}</p>
-${l.id==="001"?'<p class="lesson-status"><strong>✓ Complete lesson available</strong> · Detailed explanations, listening practice and 40 exercises</p><a class="btn btn-teal" href="lesson.html">Study Full Lesson →</a>':'<p class="lesson-status">Short preview · Full lesson coming later</p><button class="btn btn-teal" onclick="openLesson(\''+l.id+'\')">View Preview →</button>'}
-</div>`).join(""):"<p>No lessons found.</p>";
+const q=query.trim().toLowerCase(),results=(q?lessons.filter(function(l){return (l.id+" "+l.title+" "+l.main).toLowerCase().includes(q);}):lessons.slice(0,9)).slice(0,24);
+document.getElementById("lesson-grid").innerHTML=results.length?results.map(function(l){
+const url=l.id==="001"?"lesson.html":"study.html?lesson="+l.id;
+const note=l.id==="001"?"Extended lesson with dialogues, 40 activities and pronunciation practice.":"Study-guide lesson with worked examples, flashcards and 40 activities.";
+return '<div class="lesson-card"><small>LESSON '+escLesson(l.id)+' · '+escLesson(l.level)+'</small><h3>'+escLesson(l.title)+'</h3><p>'+escLesson(note)+'</p><a class="btn btn-teal" href="'+url+'">Study Lesson →</a></div>';
+}).join(""):"<p>No matching lessons found. Try the full course catalogue.</p>";
 }
-
-function openLesson(id){
-if(id==="001"){window.location.href="lesson.html";return;}
-const l=lessons.find(x=>x.id===id);
-if(!l)return;
-document.getElementById("lesson-content").innerHTML=`
-<div class="section-label">LESSON ${l.id} · BRITISH ENGLISH</div>
-<h2>${l.title}</h2>
-<p style="color:#078f86;font-weight:bold">${l.sub}</p>
-<p>${l.intro}</p>
-<div class="rule"><strong>KEY GRAMMAR RULE</strong><br>${l.rule}</div>
-<h3>Examples</h3>
-<div class="lesson-examples">
-${l.examples.map((e,i)=>`<div class="lesson-example"><b style="color:#078f86">${i+1}.</b> ${e}</div>`).join("")}
-</div>
-<div class="tip"><b>✦ Learning Tip</b><br>${l.tip}</div>
-<p class="note">This sample lesson will be expanded with more explanations, exercises and answer keys.</p>
-`;
-document.getElementById("lesson-view").hidden=false;
-document.getElementById("lesson-view").scrollIntoView({behavior:"smooth"});
-}
-
 document.getElementById("search").addEventListener("input",e=>renderLessons(e.target.value));
 renderLessons();
 
