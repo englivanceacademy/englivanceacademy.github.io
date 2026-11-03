@@ -1,0 +1,23 @@
+/* Extended lessons share the Academy navy, teal and gold palette. */
+.fl-goals{padding-left:24px;font-size:17px;max-width:880px}.fl-goals li{margin:12px 0}
+.fl-section-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:26px}
+.fl-section-links a{border:1px solid #b9d9d3;background:#f0f9f6;padding:12px 16px;border-radius:9px;color:#0b625c;font-size:14px;font-weight:700}
+.deep-topic{scroll-margin-top:90px}.deep-topic>p{font-size:17px;max-width:920px}.deep-topic li{font-size:16px;line-height:1.8}
+.fl-table-wrap{overflow-x:auto;margin:20px 23px 26px}.fl-table-wrap table{min-width:490px}
+.fl-table-wrap caption{text-align:left;font-weight:700;font-size:14px;padding:9px;background:#f5faf8}
+.fl-table-wrap tbody th{font-size:15px;font-weight:700;color:#123d48;background:#f1f8f6}
+.fl-example .sentence{overflow-wrap:anywhere;font-size:18px}.fl-example>p:not(.sentence){font-size:15px;color:#4a6272}
+.dialogue-block .dialogue-line{font-size:16px}.dialogue-line .listen{margin:4px 0 0 6px}
+.fl-question{min-width:0;margin:18px 0 22px;padding:15px 20px 20px}.fl-question legend{max-width:100%;font-weight:700;line-height:1.6;padding:0 7px;overflow-wrap:anywhere}
+.fl-question input[type=text],.fl-question textarea{background:#fbfdff;max-width:100%;font-size:17px}
+.fl-option{display:flex;gap:11px;align-items:flex-start;border:1px solid #d5e2e7;background:#f7fafb;padding:13px 15px;border-radius:9px;margin:8px 0;cursor:pointer}
+.fl-option:hover{border-color:#078e84;background:#edf8f4}.fl-option:has(input:checked){border-color:#078e84;background:#e4f6ef}
+.fl-option input[type=radio]{display:inline-block;width:19px;height:19px;max-width:none;margin:4px 0 0;flex-shrink:0;accent-color:#078e84}
+.fl-option span{overflow-wrap:anywhere}.fl-part{margin:35px 0 48px}.fl-part>h3{border-top:2px solid #c6dcd7;padding-top:22px}
+.fl-reading{border-left:5px solid #f4b942;border-radius:0 12px 12px 0;background:#fff6df;padding:20px 25px;margin-bottom:30px;font-size:17px;line-height:1.9}
+.fl-reading h4{margin:0 0 12px;font-size:17px}.fl-reading p{margin:0 0 8px}
+.fl-related{display:grid;gap:10px;margin:0 0 30px}.fl-related a{padding:12px 16px;background:#e6f5ef;border-radius:8px;color:#0a6b60;font-size:14px;font-weight:700}
+.fl-reference{color:#086c83;text-decoration:underline;text-underline-offset:3px}.answer-list p{margin:5px 0 10px}
+.deep-error .badword{text-decoration:none}.deep-error p{font-size:15px}.flashcard .answer{font-size:20px;overflow-wrap:anywhere}
+@media(max-width:650px){.fl-section-links{grid-template-columns:1fr}.fl-question{padding:12px}.fl-option{padding:12px 10px}.fl-table-wrap{margin:15px 12px 20px}.deep-topic h3{padding:17px;font-size:21px}.deep-topic>p{padding:0 17px}.deep-topic ul{padding-left:37px;padding-right:18px}.dialogue-block{padding:17px}.hero h1{font-size:35px;overflow-wrap:anywhere}.fl-reading{padding:17px}.wrap{width:calc(100% - 28px)}}
+@media print{.fl-section-links,.fl-option input,.fl-part>[data-fl-check]{display:none!important}.fl-table-wrap{overflow:visible;margin:10px 0}.fl-table-wrap table{min-width:0;font-size:11px}.fl-table-wrap th,.fl-table-wrap td{padding:6px}.deep-topic,.dialogue-block{box-shadow:none;break-inside:auto}.fl-example,.deep-error,.fl-question{break-inside:avoid}.fl-option{padding:5px}.fl-question input[type=text],.fl-question textarea{min-height:35px}.hero{background:white!important;color:#142e40;padding:20px 0}.hero .lead,.hero .note{color:#142e40!important}.hero .meta span{color:#142e40;border-color:#aaa}.fl-reference{color:#142e40}footer{background:white;color:#142e40}footer strong{color:#142e40}}

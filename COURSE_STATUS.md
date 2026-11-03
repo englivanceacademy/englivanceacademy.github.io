@@ -12,7 +12,7 @@ Last updated: 3 November 2026
 
 ## Full curriculum
 
-All 240 lesson pages follow the existing Academy study guide, with 29 modules and seven broad learning bands (Pre-A1 through C2-oriented). Each study-page edition provides ten core worked examples (including editorially corrected replacements when a recycled book sentence was off-topic), flashcards and 40 practice activities, with 20 automatically checked and 20 open-ended. Browser-local progress and print are supported.
+All 240 lesson pages follow the existing Academy study guide, with 29 modules and seven broad learning bands (Pre-A1 through C2-oriented). The legacy study-page editions provide ten core worked examples (including editorially corrected replacements when a recycled book sentence was off-topic), flashcards and 40 practice activities, with 20 automatically checked and 20 open-ended. Browser-local progress and print are supported.
 
 Lesson numbers and sequence follow the PDF `Easy_Learning_English_240_Lessons_Clickable_Module_Lesson_Finder.pdf`. Some earlier Facebook lesson numbers differ. Do not silently merge the two numbering systems.
 
@@ -20,14 +20,18 @@ Lesson numbers and sequence follow the PDF `Easy_Learning_English_240_Lessons_Cl
 
 | Lessons | Count | What is actually published |
 | --- | ---: | --- |
-| 001 | 1 | Individually hand-developed full extended lesson, 10 textbook examples, 30 additional examples, five dialogues, guided listening/practice and review |
-| 002–003 | 2 | Extended alphabet lessons with British letter-name tables, 30 extra examples each and five dialogues each |
-| Topic-specific grammar workshops | 64 | Independently authored explanations divided into two focused sections per topic, **319 extra worked examples across the 64 lessons**, common-error corrections with reasons, 192 topic-specific multiple-choice checks, and links to related lessons, on top of the existing study-guide content and 40 activities |
-| Remaining study-guide editions | 173 | Original study-guide explanations, ten worked examples each, flashcards, 40 activities, answer keys and progress; still awaiting deep manual editorial expansion |
+| 001 | 1 | Existing individually written extended lesson, with 40 examples, five dialogues, varied practice and review |
+| 002–010 | 9 | New full extended editions: each has five specific goals, six teaching sections, comparison/reference tables where useful, 30 explained examples, five dialogues, at least five common-confusion corrections, 30 flashcards, one reading passage and 40 individually written tasks with reasons |
+| Other topic-specific grammar workshops | 63 | Original focused workshops remain available outside Lessons 001–010; these are not yet full extended editions |
+| Other study-guide editions | 167 | Existing notes, examples and template-based practice remain available; deep editorial expansion is pending |
 
-**Important:** All 240 lesson *pages* are published. This does **not** mean all 240 have reached the unusually thorough editorial depth of Lesson 001. The 64 newly enhanced topics are substantive targeted grammar workshops, but still need further context, extra dialogues, varied topic-specific assessment and careful source review to reach the complete gold standard. The remaining 173 await comparable enrichment.
+**This batch:** 270 worked examples, 45 dialogues and 360 original tasks across Lessons 002–010. Each practice set contains 10 multiple-choice questions, 10 short answers, five corrections, five word-order tasks, five reading questions and five open tasks. Questions 1–35 have answer checks; 36–40 have model responses for self-assessment. Scores do not assess pronunciation. Device speech is optional and accent-dependent; reference links support UK recorded pronunciation.
 
-**Example audit:** 62 recycled or off-topic study-guide example sentences were replaced in 38 of the expanded lessons, to keep the core examples aligned with the specific grammar topic. More example auditing is needed for the other lessons.
+**Status:** Lessons 001–010 have full extended editions. The other 230 lessons do not yet have the same teaching depth. Do not describe publication of 240 pages as completion of 240 extended lessons.
+
+**Progress:** New lesson answers, checked scores and specific goal ticks are saved locally under `eva-full-NNN-v1`. Existing legacy progress remains unchanged under its original keys. No account or cross-device sync is provided.
+
+**Source safety:** The canonical syllabus and all existing lesson IDs are unchanged. `full-lessons.js` adds original lesson content; `full-lessons-ui.js` renders these editions; `full-lessons.css` provides responsive styling. The renderer falls back to the existing study-guide/workshop view for other lessons.
 
 ## Grammar workshop coverage (64 lessons in 12 topic families)
 
@@ -46,8 +50,8 @@ Lesson numbers and sequence follow the PDF `Easy_Learning_English_240_Lessons_Cl
 
 ## Editorial expansion roadmap (scope: the full English language)
 
-1. Finish the remaining 173 lessons as individually written, accurate lessons, following the 240-lesson structure.
-2. Enrich the 64 new grammar workshops to the Lesson 001 target: more adult-use examples (aim for 30 where pedagogically useful), at least five natural dialogues/situational exchanges when appropriate, genuinely varied practice and fully reviewed answer keys.
+1. Continue with Lessons 011–024, then develop every remaining lesson in the existing 240-lesson sequence. A total of 230 lessons remain below the full extended-edition target.
+2. Enrich the remaining 63 grammar workshops to the Lesson 001 target: more adult-use examples (aim for 30 where pedagogically useful), at least five natural dialogues/situational exchanges when appropriate, genuinely varied practice and fully reviewed answer keys.
 3. Strengthen foundational grammar gaps: determiners, noun phrases, verb types, irregular forms, articles, question word order, pronoun types and subject–verb agreement; create targeted practice.
 4. Deepen pronunciation/phonology beyond letter names: IPA reference, vowel and consonant contrasts, syllables, stress, rhythm, intonation, connected speech, weak forms, schwa, listening discrimination and British accent awareness.
 5. Deepen prepositions, conjunctions, adjectives, adverbs, reported speech, passives, conditionals, relative and non-finite clauses, modal verbs, tense/aspect, inversion, hedging and register.
@@ -61,7 +65,10 @@ The list is a roadmap, **not** a claim of completed coverage. English is open-en
 
 - `course-data.js` — canonical book-derived syllabus, 240 lesson records and alphabet supplements.
 - `grammar-expansions.js` — 64 individually authored topic-specific workshops; each has two sections, rules, worked examples, common errors and three scored quiz questions.
-- `study.html` — reusable lesson renderer; loads the extra workshop when available.
+- `full-lessons.js` — original full extended lessons 002–010.
+- `full-lessons-ui.js` — detailed lesson rendering, 40 varied activities, marking, complete answer keys, audio, flashcards and saved responses.
+- `full-lessons.css` — extended-edition responsive and print presentation.
+- `study.html` — routes 002–010 to the full renderer and preserves the original study-guide/workshop renderer elsewhere.
 - `grammar.html` — searchable topic finder across 12 families.
 - `lesson.html` — extended Lesson 001.
 - `catalog.html` — all 240 lessons with accurate edition badges.
@@ -77,3 +84,4 @@ The list is a roadmap, **not** a claim of completed coverage. English is open-en
 - Provide usable mobile typography, accessible labels, reading/print functionality and accurate publication status.
 - Do not claim official accreditation, examination equivalence or guaranteed fluency.
 - Verify source syntax, quiz answers, lesson navigation, live publication and caches after each batch.
+
