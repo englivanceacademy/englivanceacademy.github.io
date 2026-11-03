@@ -7,7 +7,7 @@ function normalise(value,strict){
  let s=String(value).normalize('NFKC').replace(/[‘’]/g,"'").replace(/[“”]/g,'"').replace(/[–—]/g,'-').replace(/\s+/g,' ').trim();
  // Keep meaningful email, symbol, decimal and IPA characters. Ignore only sentence-final punctuation.
  if(s.length>1&&!s.includes('@')&&!/^[\d£]+\.[\d]+$/.test(s))s=s.replace(/[.!?]+$/,'');
- if(!/[.@_£/]/.test(s))s=s.replace(/[,;:]/g,'');
+ if(!/[.@_£/]/.test(s)){s=s.replace(/[,;]/g,'');if(!/\d:\d/.test(s))s=s.replace(/:/g,'');}
  return strict?s:s.toLowerCase();
 }
 function strictCase(q){return /capital|lower-case|upper-case|personal name|Correct: i am/.test(q.prompt);}

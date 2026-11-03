@@ -470,7 +470,7 @@ footer .designer-credit{color:#f4b942;font-weight:bold;margin-top:18px}
 <div class="wrap">
 <div class="section-label">THE COMPLETE COURSE ROADMAP</div>
 <h2 class="section-title">From Zero to Advanced English</h2>
-<p class="section-sub">Study all 240 lessons across seven progressive stages, from absolute beginner to C2-oriented learning. Lessons 001–024 now have full extended teaching editions. Lessons 002–024 each include six teaching sections, 30 worked examples, five practical dialogues and 40 varied activities with answer explanations. Across the course, 64 topic-specific grammar workshops provide additional teaching. Later lessons are available in study-guide form while their detailed expansions continue.</p>
+<p class="section-sub">Study all 240 lessons across seven progressive stages, from absolute beginner to C2-oriented learning. Lessons 001–040 now have full extended teaching editions. Lessons 002–040 each include six teaching sections, 30 worked examples, five practical dialogues and 40 varied activities with answer explanations. The Grammar Topic Finder links 64 grammar topics across the course. Later lessons are available in study-guide form while their detailed expansions continue.</p>
 <div class="level-grid" id="level-grid"></div>
 </div>
 </section>
@@ -541,7 +541,7 @@ function renderLessons(query=""){
 const q=query.trim().toLowerCase(),results=(q?lessons.filter(function(l){return (l.id+" "+l.title+" "+l.main).toLowerCase().includes(q);}):lessons.slice(0,9)).slice(0,24);
 document.getElementById("lesson-grid").innerHTML=results.length?results.map(function(l){
 const url=l.id==="001"?"lesson.html":"study.html?lesson="+l.id;
-const note=Number(l.id)>=2&&Number(l.id)<=24?"Full extended lesson: 30 worked examples, 5 dialogues and 40 varied activities with answer explanations.":l.id==="001"?"Extended lesson with dialogues, 40 activities and pronunciation practice.":l.supplement?"Extended alphabet workshop: British letter names, 30 extra examples and 5 dialogues.":"Study-guide lesson with worked examples, flashcards and 40 activities.";
+const note=Number(l.id)>=2&&Number(l.id)<=40?"Full extended lesson: 30 worked examples, 5 dialogues and 40 varied activities with answer explanations.":l.id==="001"?"Extended lesson with dialogues, 40 activities and pronunciation practice.":l.supplement?"Extended alphabet workshop: British letter names, 30 extra examples and 5 dialogues.":"Study-guide lesson with worked examples, flashcards and 40 activities.";
 return '<div class="lesson-card"><small>LESSON '+escLesson(l.id)+' · '+escLesson(l.level)+'</small><h3>'+escLesson(l.title)+'</h3><p>'+escLesson(note)+'</p><a class="btn btn-teal" href="'+url+'">Study Lesson →</a></div>';
 }).join(""):"<p>No matching lessons found. Try the full course catalogue.</p>";
 }
