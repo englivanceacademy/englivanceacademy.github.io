@@ -38,7 +38,7 @@ if(!results.length){area.innerHTML='<div class="empty"><h2>No matching lessons</
 area.innerHTML=db.modules.map(function(m){
 const items=results.filter(function(l){return l.module===m.number;});if(!items.length)return "";
 return '<section class="module"><div class="module-header"><div><small>MODULE '+String(m.number).padStart(2,"0")+'</small><h2>'+esc(m.title)+'</h2></div><span class="level-badge">'+esc(m.level)+' · '+items.length+' lessons</span></div><div class="grid">'+items.map(function(l){
-const featured=l.id==="001",url=featured?"lesson.html":"study.html?lesson="+l.id;
+const featured=l.id==="001"||Boolean(l.supplement),url=l.id==="001"?"lesson.html":"study.html?lesson="+l.id;
 return '<article class="card'+(featured?" featured":"")+'"><span class="number">LESSON '+esc(l.id)+' · '+esc(l.level)+(featured?" · EXTENDED EDITION":"")+'</span><h3>'+esc(l.title)+'</h3><p>'+esc(l.main)+'</p><a href="'+url+'">Study Lesson '+esc(l.id)+' →</a></article>';
 }).join("")+'</div></section>';
 }).join("");
