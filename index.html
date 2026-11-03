@@ -541,7 +541,7 @@ function renderLessons(query=""){
 const q=query.trim().toLowerCase(),results=(q?lessons.filter(function(l){return (l.id+" "+l.title+" "+l.main).toLowerCase().includes(q);}):lessons.slice(0,9)).slice(0,24);
 document.getElementById("lesson-grid").innerHTML=results.length?results.map(function(l){
 const url=l.id==="001"?"lesson.html":"study.html?lesson="+l.id;
-const note=l.id==="001"?"Extended lesson with dialogues, 40 activities and pronunciation practice.":"Study-guide lesson with worked examples, flashcards and 40 activities.";
+const note=l.id==="001"?"Extended lesson with dialogues, 40 activities and pronunciation practice.":l.supplement?"Extended alphabet workshop: British letter names, 30 extra examples and 5 dialogues.":"Study-guide lesson with worked examples, flashcards and 40 activities.";
 return '<div class="lesson-card"><small>LESSON '+escLesson(l.id)+' · '+escLesson(l.level)+'</small><h3>'+escLesson(l.title)+'</h3><p>'+escLesson(note)+'</p><a class="btn btn-teal" href="'+url+'">Study Lesson →</a></div>';
 }).join(""):"<p>No matching lessons found. Try the full course catalogue.</p>";
 }
