@@ -22,6 +22,19 @@ details{border:1px solid var(--line);border-radius:10px;background:white;padding
 footer{background:var(--navy);color:#bdd1da;text-align:center;padding:32px 18px;font-size:13px}footer strong{display:block;color:white;font-size:18px}.error{padding:70px 0;text-align:center}
 @media(max-width:750px){.grid2,.grid3{grid-template-columns:1fr}.hero{padding:45px 0}.topbar{justify-content:center}.toplinks{gap:12px}section.lesson-section{padding:40px 0}.flashcard{padding:22px}.hero h1{font-size:38px}}
 @media print{header,.toc,.btn,.listen,.flashcard,.nav-next{display:none!important}section.lesson-section{padding:16px 0}.card,.exercise{break-inside:avoid}body{background:white}}
+
+/* Individually authored grammar workshops */
+.deep-head{max-width:860px}.deep-meter{display:inline-block;background:#e3f6ef;color:#096c60;border-radius:99px;padding:5px 12px;font-size:12px;font-weight:900;letter-spacing:.5px;margin:8px 0 16px}
+.deep-topic{background:#fff;border:1px solid #d9e6e6;border-radius:16px;overflow:hidden;margin:23px 0;box-shadow:0 8px 28px #193a4210}
+.deep-topic h3{margin:0;background:#e8f5f2;color:#0c5852;padding:17px 23px;font-size:23px}.deep-topic>p{padding:0 23px;color:#455a65}
+.deep-topic ul{padding:0 30px 5px 48px}.deep-topic li{margin:9px 0}.deep-topic li::marker{color:#078e84}
+.deep-examples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:15px 23px 24px}
+.deep-example{background:#f6f9fb;border-left:4px solid #edb93a;border-radius:8px;padding:15px}.deep-example strong{color:#102e42;display:block;font-size:16px}.deep-example p{font-size:13px;color:#59707d;margin:7px 0 0}.deep-example .listen{margin-top:8px}
+.deep-errors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.deep-error{border:1px solid #ead8c9;background:#fff9f2;padding:18px;border-radius:12px}.deep-error .badword{display:block;color:#993d35;text-decoration:line-through}.deep-error .goodword{display:block;color:#176e46;font-weight:800;margin-top:8px}.deep-error p{font-size:13px;color:#725c50;margin-bottom:0}
+.deep-question{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin:15px 0}.deep-question legend{font-weight:800;font-size:16px}.deep-question label{display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:8px 5px}.deep-question input{margin-top:7px;accent-color:#087e73}
+.deep-related{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}.deep-related a{background:#eaf6f4;border:1px solid #c3e2d9;padding:8px 12px;border-radius:9px;color:#0b6c61;font-weight:800;font-size:13px}
+@media(max-width:750px){.deep-examples,.deep-errors{grid-template-columns:1fr}.deep-topic>p{padding:0 17px}.deep-topic ul{padding-left:34px}.deep-examples{padding:12px 16px 20px}.deep-topic h3{padding:15px 17px}}
+@media print{.deep-topic,.deep-example,.deep-error,.deep-question{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -29,11 +42,23 @@ footer{background:var(--navy);color:#bdd1da;text-align:center;padding:32px 18px;
 <div id="not-found" class="wrap error" hidden><h1>Lesson not found</h1><p>Please choose a lesson from the course catalogue.</p><a class="btn teal" href="catalog.html">Browse Lessons</a></div>
 <div id="lesson-page" hidden>
 <div class="hero"><div class="wrap"><span class="eyebrow" id="hero-module"></span><h1 id="hero-title"></h1><p class="lead" id="hero-intro"></p><div class="meta"><span id="hero-level"></span><span>BRITISH ENGLISH</span><span>40 PRACTICE ACTIVITIES</span><span>FREE SELF-STUDY</span></div><a href="#overview" class="btn gold">Begin This Lesson →</a><a href="#practice" class="btn light">Jump to Practice</a><button class="btn light" type="button" onclick="window.print()">Print Lesson</button><p class="note" id="audio-notice" style="color:#c4e3e2" aria-live="polite">Listening uses your device's available synthetic English voice. Accent and availability may vary.</p></div></div>
-<nav class="toc"><div class="wrap"><a href="#overview">Overview</a><a href="#rules">Explanations</a><a href="#examples">10 Worked Examples</a><a href="#extension" id="extension-nav" hidden>Alphabet &amp; Dialogues</a><a href="#guided">Study Method</a><a href="#flashcards">Flashcards</a><a href="#practice">40 Activities</a><a href="#answers">Answer Key</a><a href="#review">Review</a></div></nav>
+<nav class="toc"><div class="wrap"><a href="#overview">Overview</a><a href="#rules">Explanations</a><a href="#examples">10 Worked Examples</a><a href="#deep-dive" id="deep-nav" hidden>Detailed Grammar Workshop</a><a href="#extension" id="extension-nav" hidden>Alphabet &amp; Dialogues</a><a href="#guided">Study Method</a><a href="#flashcards">Flashcards</a><a href="#practice">40 Activities</a><a href="#answers">Answer Key</a><a href="#review">Review</a></div></nav>
 <main>
 <section class="lesson-section white" id="overview"><div class="wrap"><span class="kicker">01 · Learning Goals</span><h2>Understand the main idea</h2><p class="intro">Work through each section in order. Read, listen, speak, write, practise and check your answers.</p><div class="feature" id="main-idea"></div><div class="grid2"><div class="card"><h3>When and how to use it</h3><p id="how-to-use"></p></div><div class="card"><h3>A useful detail</h3><p id="useful-detail"></p></div></div><div class="feature gold"><strong>By the end:</strong> You should be able to explain the main idea, recognise useful patterns, study ten authentic examples and apply the language in your own writing and speaking.</div></div></section>
 <section class="lesson-section" id="rules"><div class="wrap"><span class="kicker">02 · Rules and Patterns</span><h2>Clear explanations and important exceptions</h2><p class="intro">Read the notes carefully. Pay attention to how meaning, grammar and spelling can change in different situations.</p><div class="rule-card"><div id="rule-content" class="rules-text"></div></div><div class="feature"><strong>British English tip:</strong> Notice British spelling, usage and pronunciation. A word may have several accepted forms; context and meaning help you choose.</div></div></section>
 <section class="lesson-section white" id="examples"><div class="wrap"><span class="kicker">03 · The Language in Use</span><h2>Ten worked examples</h2><p class="intro">Read these examples from the Academy's study guide. Say each one aloud, notice the target language and try to explain its meaning.</p><div class="grid2" id="examples-grid"></div></div></section>
+<section class="lesson-section white" id="deep-dive" hidden><div class="wrap">
+<span class="kicker">Extra Teaching · Beyond the Study Book</span>
+<h2 class="deep-head">Detailed Grammar Workshop</h2>
+<p class="intro" id="deep-intro"></p><span id="deep-meter" class="deep-meter"></span>
+<div id="deep-sections"></div>
+<h3>Common mistakes — corrected and explained</h3>
+<p class="intro">Notice the difference between an incorrect pattern and the natural standard form. Some sentences are context-dependent; learn the meaning as well as the form.</p><div class="deep-errors" id="deep-mistakes"></div>
+<h3>Quick Check — 3 topic-specific questions</h3><p class="intro">Choose one answer for each question. Your explanation and score appear after marking.</p>
+<div id="deep-quiz"></div><button class="btn teal" id="deep-check" type="button">Check My Answers</button>
+<div class="score" id="deep-score" hidden role="status" aria-live="polite"></div>
+<h3>Continue learning this topic</h3><div id="deep-related" class="deep-related"></div>
+</div></section>
 <section class="lesson-section" id="extension" hidden><div class="wrap"><span class="kicker">Extended Alphabet Workshop</span><h2>Letter names, spelling and real-life practice</h2><p class="intro">This extra section makes your alphabet learning more complete. Learn every letter name, compare written and spoken forms, read 30 extra examples and practise five realistic dialogues.</p>
 <h3>Letter names in British English</h3><div style="overflow-x:auto"><table class="alphabet-table"><thead><tr><th>Capital / Small</th><th>Letter name (IPA)</th><th>Example word</th><th>Listen</th></tr></thead><tbody id="alphabet-body"></tbody></table></div>
 <p class="note">The IPA shows the name of the letter. The letter's sound inside the example word may differ. Speech audio depends on the voice available on your device.</p>
@@ -55,10 +80,11 @@ footer{background:var(--navy);color:#bdd1da;text-align:center;padding:32px 18px;
 </div>
 <footer><strong>Engli Vance Academy</strong><p>Learn Clearly. Speak Confidently.</p><p>Free British English learning · 240-lesson pathway · Based on the Academy study guide</p><p>Educational self-study, not an official qualification or proficiency guarantee.</p><p>© 2026 Engli Vance Academy</p></footer>
 <script src="course-data.js"></script>
+<script src="grammar-expansions.js"></script>
 <script>
 (function(){
 "use strict";
-const db=window.EVA_COURSE_DATA, params=new URLSearchParams(location.search), id=params.get("lesson"), lesson=db&&db.lessons.find(function(x){return x.id===id;});
+const db=window.EVA_COURSE_DATA, deepMap=window.EVA_GRAMMAR_EXPANSIONS||{}, params=new URLSearchParams(location.search), id=params.get("lesson"), lesson=db&&db.lessons.find(function(x){return x.id===id;});
 if(id==="001"){location.replace("lesson.html");return;}
 if(!lesson){document.getElementById("not-found").hidden=false;return;}
 document.getElementById("lesson-page").hidden=false;
@@ -85,6 +111,27 @@ byId("rule-content").textContent="This lesson develops your practical communicat
 }
 byId("examples-grid").innerHTML=lesson.examples.map(function(example,i){return '<article class="example"><span class="number">EXAMPLE '+String(i+1).padStart(2,"0")+'</span><p class="sentence">'+esc(example)+'</p><button type="button" class="listen" data-speak="'+i+'" aria-label="Listen to example '+(i+1)+'">🔊 Listen</button></article>';}).join("");
 document.querySelectorAll("[data-speak]").forEach(function(btn){btn.addEventListener("click",function(){evaSpeak(lesson.examples[Number(btn.getAttribute("data-speak"))]);});});
+
+
+const deep=deepMap[lesson.id];
+if(deep){
+byId("deep-dive").hidden=false;byId("deep-nav").hidden=false;
+byId("deep-intro").textContent=deep.intro;
+const extraCount=deep.sections.reduce(function(n,sec){return n+(sec.examples||[]).length;},0);
+byId("deep-meter").textContent=deep.sections.length+" FOCUSED EXPLANATIONS · "+extraCount+" EXTRA WORKED EXAMPLES · "+deep.mistakes.length+" CORRECTED ERRORS · "+deep.quiz.length+" QUIZ QUESTIONS";
+byId("deep-sections").innerHTML=deep.sections.map(function(sec,si){return '<article class="deep-topic"><h3>'+(si+1)+'. '+esc(sec.title)+'</h3><p>'+esc(sec.explain)+'</p><ul>'+sec.points.map(function(p){return '<li>'+esc(p)+'</li>';}).join('')+'</ul><div class="deep-examples">'+sec.examples.map(function(pair,ei){return '<div class="deep-example"><strong>'+esc(pair[0])+'</strong><p>'+esc(pair[1])+'</p><button type="button" class="listen" data-deep-speak="'+si+'-'+ei+'">🔊 Listen</button></div>';}).join('')+'</div></article>';}).join('');
+byId("deep-mistakes").innerHTML=deep.mistakes.map(function(row){return '<article class="deep-error"><strong class="badword">✗ '+esc(row[0])+'</strong><strong class="goodword">✓ '+esc(row[1])+'</strong><p>'+esc(row[2])+'</p></article>';}).join('');
+byId("deep-quiz").innerHTML=deep.quiz.map(function(item,i){return '<fieldset class="deep-question"><legend>'+(i+1)+'. '+esc(item[0])+'</legend>'+item[1].map(function(option,j){return '<label><input type="radio" name="deep-q'+i+'" value="'+j+'"><span>'+String.fromCharCode(65+j)+'. '+esc(option)+'</span></label>';}).join('')+'<div id="deep-f'+i+'" class="feedback" hidden></div></fieldset>';}).join('');
+byId("deep-related").innerHTML=deep.related.map(function(n){const target=db.lessons.find(function(x){return x.id===n;});return target?'<a href="study.html?lesson='+esc(n)+'">Lesson '+esc(n)+': '+esc(target.title)+' →</a>':'';}).join('');
+document.querySelectorAll("[data-deep-speak]").forEach(function(button){button.addEventListener("click",function(){const part=button.getAttribute("data-deep-speak").split("-").map(Number);evaSpeak(deep.sections[part[0]].examples[part[1]][0]);});});
+byId("deep-check").addEventListener("click",function(){
+let correct=0,attempted=0;
+deep.quiz.forEach(function(item,i){const selected=document.querySelector('input[name="deep-q'+i+'"]:checked'),value=selected?Number(selected.value):-1,ok=value===item[2];if(selected)attempted++;if(ok)correct++;
+const feedback=byId("deep-f"+i);feedback.hidden=false;feedback.className="feedback "+(ok?"good":"bad");feedback.textContent=(ok?"✓ Correct. ":"Review: ")+item[3]+" Correct answer: "+String.fromCharCode(65+item[2])+". "+item[1][item[2]];});
+const score=byId("deep-score");score.hidden=false;score.textContent="You answered "+attempted+" of "+deep.quiz.length+" questions. Score: "+correct+"/"+deep.quiz.length+". Read the explanations and try again to improve.";
+const data=readData();data.scores=data.scores||{};data.scores.deep={score:correct,total:deep.quiz.length};storeData(data);drawProgress();
+});
+}
 
 if(lesson.supplement){
 const sup=lesson.supplement;
@@ -146,7 +193,7 @@ const d=readData();d.scores=d.scores||{};d.scores[kind]={score:score,total:answe
 }
 window.evaCheckGaps=function(){grade("gap",gaps.map(function(x){return x.answer;}));};
 window.evaCheckRecall=function(){grade("recall",lesson.examples);};
-function drawProgress(){const s=readData().scores||{},entries=[s.gap,s.recall].filter(Boolean);const score=entries.reduce(function(n,v){return n+v.score;},0);const total=entries.reduce(function(n,v){return n+v.total;},0);byId("score-summary").textContent=entries.length?entries.length+" of 2 auto-marked sections checked · "+score+" correct out of "+total+".":"No sections checked yet.";}
+function drawProgress(){const s=readData().scores||{},entries=[s.gap,s.recall,deep?s.deep:null].filter(Boolean);const score=entries.reduce(function(n,v){return n+v.score;},0);const total=entries.reduce(function(n,v){return n+v.total;},0);byId("score-summary").textContent=entries.length?entries.length+" of "+(deep?3:2)+" auto-marked sections checked · "+score+" correct out of "+total+".":"No sections checked yet.";}
 drawProgress();
 byId("answer-key").innerHTML=gaps.map(function(x,i){return "<li><strong>"+(i+1)+". "+esc(x.answer)+"</strong> — "+esc(lesson.examples[i])+"</li>";}).join("")+lesson.examples.map(function(x,i){return "<li><strong>"+(i+11)+".</strong> "+esc(x)+"</li>";}).join("");
 const checks=Array.from(document.querySelectorAll('#review-list input[type="checkbox"]'));
